@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><title>Welcome to nginx!</title>
+
+<script>
+document.write("This is from JavaScript, update! send to the server");
+</script>
+<script src="http://gamingJS.com/Three.js"></script>
+<script src="http://gamingJS.com/ChromeFixes.js"></script>
+<script>
+  // This is where stuff in our game will happen:
+  var scene = new THREE.Scene();
+
+  // This is what sees the stuff:
+  var aspect_ratio = window.innerWidth / window.innerHeight;
+  var camera = new THREE.PerspectiveCamera(75, aspect_ratio, 1, 10000);
+  camera.position.z = 500;
+  scene.add(camera);
+
+  // This will draw what the camera sees onto the screen:
+  var renderer = new THREE.CanvasRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  // ******** START CODING ON THE NEXT LINE ********
+
+var shape = new THREE.SphereGeometry(100);
+var cover = new THREE.MeshNormalMaterial();
+var ball = new THREE.Mesh(shape,cover);
+scene.add(ball);
+
+
+
+  // Now, show what the camera sees on the screen:
+  renderer.render(scene, camera);
+</script>
+<style>
+body {
+width: 35em;
+margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully
+installed and
+working. Further configuration is required.</p>
+<p>Testing</p>
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br>
+Commercial support is available at this site
+<a href="http://nginx.com/">nginx.com</a>.</p>
+<p><em>Thank you for using nginx.</em></p>
+</body></html>
